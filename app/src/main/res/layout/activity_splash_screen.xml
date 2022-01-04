@@ -14,6 +14,6 @@
         android:layout_centerInParent="true"
         android:backgroundTint="#FFFFFF"
         android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+        android:src="@drawable/KSD" />
 
 </RelativeLayout>
