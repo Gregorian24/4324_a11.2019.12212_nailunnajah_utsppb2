@@ -1,4 +1,4 @@
-package com.example.tugasproject;
+package com.udinus.UAS43UG_12811_10727_12420_12212;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,8 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tugasproject.LoginActivity;
-import com.example.tugasproject.adapters.MainAdapter;
+import com.udinus.UAS43UG_12811_10727_12420_12212.adapters.MainAdapter;
 
 import java.util.ArrayList;
 

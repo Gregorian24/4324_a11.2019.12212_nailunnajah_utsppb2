@@ -1,4 +1,4 @@
-package com.example.tugasproject;
+package com.udinus.UAS43UG_12811_10727_12420_12212;
 
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (usernameKey.equals("nailunnajah") && passwordKey.equals("110201")){
                     //jika login berhasil
 
-                    Intent intent = new Intent(LoginActivity.this, com.example.tugasproject.MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, com.udinus.UAS43UG_12811_10727_12420_12212.MainActivity.class);
                     LoginActivity.this.startActivity(intent);
                     finish();
                 }else {

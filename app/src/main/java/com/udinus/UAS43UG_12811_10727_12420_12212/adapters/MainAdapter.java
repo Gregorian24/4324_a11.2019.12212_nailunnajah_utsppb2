@@ -1,4 +1,4 @@
-package com.example.tugasproject.adapters;
+package com.udinus.UAS43UG_12811_10727_12420_12212.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,8 +14,8 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.tugasproject.DetailActivity;
-import com.example.tugasproject.R;
+import com.udinus.UAS43UG_12811_10727_12420_12212.DetailActivity;
+import com.udinus.UAS43UG_12811_10727_12420_12212.R;
 
 import java.util.ArrayList;
 
