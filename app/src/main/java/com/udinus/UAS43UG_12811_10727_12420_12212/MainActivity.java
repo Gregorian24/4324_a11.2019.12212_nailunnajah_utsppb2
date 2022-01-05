@@ -21,24 +21,21 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     //vars
-    private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<String> mImageUrls = new ArrayList<>();
-    private ArrayList<String> mDetailss = new ArrayList<>();
+    private final ArrayList<String> mNames = new ArrayList<>();
+    private final ArrayList<String> mImageUrls = new ArrayList<>();
+    private final ArrayList<String> mDetailss = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button= (Button)findViewById(R.id.order);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://wa.me/6282228132455?text=Saya%20ingin%20mencuci%20sepatu%20saya"));
-                startActivity(intent);
-            }
+        Button button= findViewById(R.id.order);
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            intent.setData(Uri.parse("https://wa.me/6282228132455?text=Saya%20ingin%20mencuci%20sepatu%20saya"));
+            startActivity(intent);
         });
         Log.d(TAG, "onCreate: started.");
 
