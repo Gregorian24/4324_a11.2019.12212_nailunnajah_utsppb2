@@ -30,13 +30,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<String> mDetails = new ArrayList<>();
+    private ArrayList<String> mPrice = new ArrayList<>();
     private Context mContext;
 
-    public MainAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images, ArrayList<String> details ) {
+    public MainAdapter(Context context, ArrayList<String> imageNames, ArrayList<String> images, ArrayList<String> details, ArrayList<String> price ) {
         mImageNames = imageNames;
         mImages = images;
         mDetails = details;
         mContext = context;
+        mPrice = price;
     }
 
     @Override
@@ -68,6 +70,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
                 intent.putExtra("image_url", mImages.get(position));
                 intent.putExtra("image_name", mImageNames.get(position));
                 intent.putExtra("image_detail", mDetails.get(position));
+                intent.putExtra("image_price", mPrice.get(position));
                 mContext.startActivity(intent);
             }
         });
