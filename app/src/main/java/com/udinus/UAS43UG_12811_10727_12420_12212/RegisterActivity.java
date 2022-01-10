@@ -38,7 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
             }
         });
-        inputEmail = findViewById(R.id.email);
+        inputEmail = findViewById(R.id.username);
         pass1 = findViewById(R.id.pass1);
         pass2 = findViewById(R.id.pass2);
         btnDaftar = findViewById(R.id.btnDaftar);
@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         if (task.isSuccessful()) {
                                             // Sign in success, update UI with the signed-in user's information
                                             Toast.makeText(RegisterActivity.this, "Registrasi sukses", Toast.LENGTH_LONG).show();
-                                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                            startActivity(new Intent(getApplicationContext(), activity_register_success.class));
                                             finish();
                                         } else {
                                             // If sign in fails, display a message to the user.

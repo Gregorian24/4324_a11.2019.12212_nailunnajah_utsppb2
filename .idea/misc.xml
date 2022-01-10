@@ -12,22 +12,25 @@
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout-v28/activity_login.xml" value="0.26621847886098404" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_about.xml" value="0.12552083333333333" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_about2.xml" value="0.11822916666666666" />
-        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_confirm_password.xml" value="0.121875" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_confirm_password.xml" value="0.26621847886098404" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_confirm_password2.xml" value="0.10416666666666667" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_detail.xml" value="0.18342391304347827" />
-        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_forgot_password.xml" value="0.121875" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_forgot_password.xml" value="0.20168066580377575" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_login.xml" value="0.18342391304347827" />
-        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_main.xml" value="0.18342391304347827" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_login_success.xml" value="0.15260416666666668" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_main.xml" value="0.38286713286713286" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_main2.xml" value="0.11822916666666666" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_register.xml" value="0.26621847886098404" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_register_success.xml" value="0.15260416666666668" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_reset_success.xml" value="0.15260416666666668" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_selection_car.xml" value="0.1140625" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_selection_motorcycle.xml" value="0.1140625" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_selection_truck.xml" value="0.12552083333333333" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_form.xml" value="0.12552083333333333" />
-        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_form_car.xml" value="0.13229166666666667" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_form_car.xml" value="0.26621847886098404" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_form_motorcycle.xml" value="0.1140625" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_form_truck.xml" value="0.1140625" />
-        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_selection.xml" value="0.1140625" />
+        <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_service_selection.xml" value="0.26621847886098404" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_services_selection.xml" value="0.12552083333333333" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_services_selection_car.xml" value="0.12552083333333333" />
         <entry key="..\:/Android_Work/UAS43UG_12811_10727_12420_12212/app/src/main/res/layout/activity_services_selection_motorcycle.xml" value="0.12552083333333333" />

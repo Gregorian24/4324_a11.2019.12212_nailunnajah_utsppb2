@@ -29,10 +29,7 @@ public class DetailActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://wa.me/6288215604251?text=Saya%20ingin%20mencuci%20mobil%20saya"));
+                Intent intent = new Intent(DetailActivity.this, ActivityServiceSelection.class);
                 startActivity(intent);
             }
         });

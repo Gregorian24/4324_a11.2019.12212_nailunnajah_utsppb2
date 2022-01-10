@@ -14,4 +14,14 @@
     <string name="txt_quit">QUIT</string>
     <string name="txt_register">REGISTER</string>
     <string name="txt_remember">Remember me</string>
+    <string name="txt_about">ABOUT</string>
+    <string name="txt_map">LOCATION</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="send_request">Send Request</string>
+    <string name="change_password">Change Password</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Passsword</string>
+    <string name="enter_your_reset_code">Enter your reset code</string>
+    <string name="reset_code">Reset Code</string>
 </resources>

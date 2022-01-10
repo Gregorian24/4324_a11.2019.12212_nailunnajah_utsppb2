@@ -1,17 +1,21 @@
 package com.udinus.UAS43UG_12811_10727_12420_12212;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.udinus.UAS43UG_12811_10727_12420_12212.adapters.MainAdapter;
+import com.udinus.UAS43UG_12811_10727_12420_12212.LoginActivity;
 
 import java.util.ArrayList;
 
@@ -35,10 +39,17 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ActivityServiceSelection.class);
             startActivity(intent);
         });
-        final Button button2 = findViewById(R.id.btntoLogin);
-        button2.setOnClickListener(new View.OnClickListener() {
+        final Button button3 = findViewById(R.id.btn_about);
+        button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, ActivityAbout.class);
+                startActivity(intent);
+            }
+        });
+        final Button button4 = findViewById(R.id.btn_map);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MapsActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,18 +62,18 @@ public class MainActivity extends AppCompatActivity {
     private void initImageBitmaps(){
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
-        mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/fastclean.png");
+        mImageUrls.add("R.drawable.cuci1");
         mNames.add("Cuci Reguler");
         mDetailss.add("Cuci exterior otomotif.");
         mPrice.add("Rp. 60.000,00");
 
 
-        mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/fastclean%20(1).png");
+        mImageUrls.add("R.drawable.cuci2");
         mNames.add("Cuci Reguler+");
         mDetailss.add("Cuci exterior serta interior otomotif.");
         mPrice.add("Rp. 115.000,00");
 
-        mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/Desain%20tanpa%20judul.png");
+        mImageUrls.add("R.drawable.cuci3");
         mNames.add("Cuci Komplit");
         mDetailss.add("Cuci seluruh bagian otomotif, termasuk bagian yang sulit dicapai.");
         mPrice.add("Rp. 160.000,00");
