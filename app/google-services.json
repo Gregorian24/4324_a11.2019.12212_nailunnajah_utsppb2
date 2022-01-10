@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "205860166655",
+    "project_id": "cukur-12afb",
+    "storage_bucket": "cukur-12afb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205860166655:android:dc1d46c4b09d036bc9e5ca",
+        "android_client_info": {
+          "package_name": "com.udinus.UAS43UG_12811_10727_12420_12212"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205860166655-gmbqdaj43chfp089lo8bhm2s5v9tlpcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt0rxL1IHymqQOyZOZIeL21VrXUprJAjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205860166655-gmbqdaj43chfp089lo8bhm2s5v9tlpcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
