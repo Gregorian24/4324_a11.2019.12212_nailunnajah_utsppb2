@@ -32,7 +32,7 @@ public class DetailActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://wa.me/6282228132455?text=Saya%20ingin%20mencuci%20sepatu%20saya"));
+                intent.setData(Uri.parse("https://wa.me/6288215604251?text=Saya%20ingin%20mencuci%20mobil%20saya"));
                 startActivity(intent);
             }
         });
@@ -44,19 +44,20 @@ public class DetailActivity extends AppCompatActivity {
     private void getIncomingIntent(){
         Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
 
-        if(getIntent().hasExtra("image_url") && getIntent().hasExtra("image_name") && getIntent().hasExtra("image_detail")){
+        if(getIntent().hasExtra("image_url") && getIntent().hasExtra("image_name") && getIntent().hasExtra("image_detail") && getIntent().hasExtra("image_price")){
             Log.d(TAG, "getIncomingIntent: found intent extras.");
 
             String imageUrl = getIntent().getStringExtra("image_url");
             String imageName = getIntent().getStringExtra("image_name");
             String imageDetail = getIntent().getStringExtra("image_detail");
+            String imagePrice = getIntent().getStringExtra("image_price");
 
-            setImage(imageUrl, imageName, imageDetail);
+            setImage(imageUrl, imageName, imageDetail, imagePrice);
         }
     }
 
 
-    private void setImage(String imageUrl, String imageName, String imageDetail){
+    private void setImage(String imageUrl, String imageName, String imageDetail, String imagePrice){
         Log.d(TAG, "setImage: setting te image and name to widgets.");
 
         TextView name = findViewById(R.id.image_description);
@@ -64,6 +65,9 @@ public class DetailActivity extends AppCompatActivity {
 
         TextView detail = findViewById(R.id.detail);
         detail.setText(imageDetail);
+
+        TextView price = findViewById(R.id.price);
+        price.setText(imagePrice);
 
         ImageView image = findViewById(R.id.image);
         Glide.with(this)

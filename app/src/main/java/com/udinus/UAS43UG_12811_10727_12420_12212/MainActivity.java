@@ -21,24 +21,21 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     //vars
-    private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<String> mImageUrls = new ArrayList<>();
-    private ArrayList<String> mDetailss = new ArrayList<>();
+    private final ArrayList<String> mNames = new ArrayList<>();
+    private final ArrayList<String> mImageUrls = new ArrayList<>();
+    private final ArrayList<String> mDetailss = new ArrayList<>();
+    private final ArrayList<String> mPrice = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button= (Button)findViewById(R.id.order);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("https://wa.me/6282228132455?text=Saya%20ingin%20mencuci%20sepatu%20saya"));
-                startActivity(intent);
-            }
+        Button button= findViewById(R.id.order);
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setAction(Intent.ACTION_VIEW);
+            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            startActivity(intent);
         });
         Log.d(TAG, "onCreate: started.");
 
@@ -50,30 +47,20 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
         mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/fastclean.png");
-        mNames.add("Fast Clean");
-        mDetailss.add("*Pembersihan area:\n -midsole\n -upper\n include parfum anti bakteri dan silica\n" +
-                "Bersih dalam hitungan jam");
+        mNames.add("Cuci Reguler");
+        mDetailss.add("Cuci exterior otomotif.");
+        mPrice.add("Rp. 60.000,00");
 
 
         mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/fastclean%20(1).png");
-        mNames.add("Deep Clean");
-        mDetailss.add("Pembersihan area:\n -midsole\n -upper\n -insole\n -outsole\n include parfum anti bakteri dan silica\n" +
-                "Bersih Wangi Tahan Lama");
+        mNames.add("Cuci Reguler+");
+        mDetailss.add("Cuci exterior serta interior otomotif.");
+        mPrice.add("Rp. 115.000,00");
 
         mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/Desain%20tanpa%20judul.png");
-        mNames.add("Unyellowing");
-        mDetailss.add("Kategori Easy Medium dan Hard\n untuk mid sole yang menguning.\n include Deep Clean\n" +
-                "Putih Seperti Baru");
-
-        mImageUrls.add("https://thebeast07-cyber.github.io/bidascucisepatu/images/fastclean%20(2).png");
-        mNames.add("Repaint");
-        mDetailss.add("Mengembalikan warna Upper atau Mid sole pada sepatu\n include Deep Clean\n " +
-                "Sepatu Tampak Baru");
-
-        mImageUrls.add("https://people-shoes.com/wp-content/uploads/2019/04/SEWING-e1554880208421.png");
-        mNames.add("Reglue");
-        mDetailss.add("Memperbaiki sole sepatu yang sudah jebol.\n menggunakan lem khusus sepatu sehingga tidak mudah jebol\n" +
-                "Sepatu Kesayangan Bisa Dipakai Kembali");
+        mNames.add("Cuci Komplit");
+        mDetailss.add("Cuci seluruh bagian otomotif, termasuk bagian yang sulit dicapai.");
+        mPrice.add("Rp. 160.000,00");
 
         initRecyclerView();
     }
@@ -81,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
-        MainAdapter adapter = new MainAdapter(this, mNames, mImageUrls, mDetailss);
+        MainAdapter adapter = new MainAdapter(this, mNames, mImageUrls, mDetailss, mPrice);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
