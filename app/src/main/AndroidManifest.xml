@@ -44,19 +44,13 @@
             android:name=".ActivityServiceFormTruck"
             android:exported="false" />
         <activity
-            android:name=".ActivitySelectionTruck"
-            android:exported="false" />
-        <activity
-            android:name=".ActivitySelectionMotorcycle"
+            android:name=".ActivityServiceFormCar"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityServiceSelection"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityServiceForm"
             android:exported="false" />
         <activity
             android:name=".ActivityForgotPassword"

@@ -78,6 +78,8 @@ public class RegisterActivity extends AppCompatActivity {
                                         if (task.isSuccessful()) {
                                             // Sign in success, update UI with the signed-in user's information
                                             Toast.makeText(RegisterActivity.this, "Registrasi sukses", Toast.LENGTH_LONG).show();
+                                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                                            finish();
                                         } else {
                                             // If sign in fails, display a message to the user.
                                             Toast.makeText(RegisterActivity.this, "Registrasi gagal, coba cek e-mail atau password anda", Toast.LENGTH_LONG).show();

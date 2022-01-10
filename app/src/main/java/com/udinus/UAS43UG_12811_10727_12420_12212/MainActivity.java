@@ -30,12 +30,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button= findViewById(R.id.order);
+        Button button= findViewById(R.id.btn_order);
         button.setOnClickListener(view -> {
-            Intent intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.addCategory(Intent.CATEGORY_BROWSABLE);
+            Intent intent = new Intent(MainActivity.this, ActivityServiceSelection.class);
             startActivity(intent);
+        });
+        final Button button2 = findViewById(R.id.btntoLogin);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
         });
         Log.d(TAG, "onCreate: started.");
 
@@ -74,9 +79,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void btnExit(View view) {
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        MainActivity.this.startActivity(intent);
-        finish();
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
 
