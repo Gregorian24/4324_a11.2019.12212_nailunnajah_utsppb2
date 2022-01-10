@@ -2,6 +2,7 @@ package com.udinus.UAS43UG_12811_10727_12420_12212;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
-        log = (TextView) findViewById(R.id.btnLogin);
+        log = findViewById(R.id.btnLogin);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,9 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
         inputEmail = findViewById(R.id.email);
-        pass1 = findViewById(R.id.password);
-        pass2 = findViewById(R.id.password);
-        btnDaftar = findViewById(R.id.btnRegister);
+        pass1 = findViewById(R.id.pass1);
+        pass2 = findViewById(R.id.pass2);
+        btnDaftar = findViewById(R.id.btnDaftar);
         btnDaftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,22 +51,59 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void registrasi() {
+    public void registrasi() {
         email = inputEmail.getText().toString();
         password1 = pass1.getText().toString();
         password2 = pass2.getText().toString();
-        mAuth.createUserWithEmailAndPassword(email,password2)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Toast.makeText(RegisterActivity.this,"Regristrasi sukses", Toast.LENGTH_LONG).show();
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(RegisterActivity.this, "Regristrasi gagal email/ password anda salah", Toast.LENGTH_LONG).show();
-                        }
+        if (TextUtils.isEmpty(inputEmail.getText().toString().trim())
+            || TextUtils.isEmpty(pass1.getText().toString().trim())
+            || (TextUtils.isEmpty(pass2.getText().toString().trim())))
+        {
+            Toast.makeText(RegisterActivity.this,"Field tidak boleh kosong!",Toast.LENGTH_LONG).show();
+        }
+        else{
+            if (!validpassword()) {
+                                Toast.makeText(RegisterActivity.this, "Panjang Password maksimal 15 karakter", Toast.LENGTH_LONG).show();
+            } else {
+                if (!samepassword())
+                {
+                    Toast.makeText(RegisterActivity.this, "Password tidak sama!", Toast.LENGTH_LONG).show();
+                }
+                else
+                    {
+                        mAuth.createUserWithEmailAndPassword(email,password2)
+                                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            // Sign in success, update UI with the signed-in user's information
+                                            Toast.makeText(RegisterActivity.this, "Registrasi sukses", Toast.LENGTH_LONG).show();
+                                        } else {
+                                            // If sign in fails, display a message to the user.
+                                            Toast.makeText(RegisterActivity.this, "Registrasi gagal, coba cek e-mail atau password anda", Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+                                });
                     }
-                });
+            }
+        }
+    }
+
+    public boolean samepassword() {
+        boolean temp = true;
+        String pass = pass1.getText().toString();
+        String cpass = pass2.getText().toString();
+        if (!pass.equals(cpass)) {
+            temp = false;
+        }
+        return temp;
+    }
+    public boolean validpassword(){
+        boolean temp=true;
+        String pass = pass1.getText().toString();
+        if(pass.length() > 15){
+            temp=false;
+        }
+        return temp;
     }
 }
